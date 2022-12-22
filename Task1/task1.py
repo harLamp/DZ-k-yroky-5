@@ -2,7 +2,7 @@
 построчно данные, вводимые пользователем. Об окончании ввода данных
 свидетельствует пустая строка."""
 
-my_f = open('test.txt', 'w')
+my_f = open('test.txt', 'w', encoding='utf-8')
 line = input('Введите текст \n')
 while line:
     my_f.writelines(line)
@@ -11,7 +11,7 @@ while line:
         break
 
 my_f.close()
-my_f = open('test.txt', 'r')
+my_f = open('test.txt', 'r', encoding='utf-8')
 content = my_f.readlines()
 print(content)
 my_f.close()
